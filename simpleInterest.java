@@ -18,7 +18,7 @@ public class simpleInterest {
 		
 		simpleInterest = (principleAmt*rateOfInterest*timeInYears)/100;
 		
-		System.out.println("The Simple Interest Is "+simpleInterest);
+		System.out.println("The Simple Interest On Principle Amount "+principleAmt+" for period of "+timeInYears+" Years Is "+simpleInterest);
 	}
 
 }
