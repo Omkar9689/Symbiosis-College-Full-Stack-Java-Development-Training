@@ -2,13 +2,17 @@ import java.util.*;
 public class ArithmaticOperationsMenuDriven {
 
 	public static void main(String[] args) { 			//main method
+		
 		int num_1,num_2;
 		char choice;							// declaring variables
 		Scanner sc=new Scanner(System.in);
+		
 		System.out.println("Enter first number:-\t"); 	//getting first number from user
 		num_1=sc.nextInt();
+		
 		System.out.println("Enter second number:-\t"); 	//getting second number from user
 		num_2=sc.nextInt();	
+		
 		do												// loop started (do-while)
 		{
 			System.out.println("MENU");					//Menu to select 
@@ -19,6 +23,7 @@ public class ArithmaticOperationsMenuDriven {
 			System.out.println("5.Exit ($)");
 			System.out.println("Enter your Choice");
 			choice=sc.next().charAt(0);						//getting choice
+			
 			switch(choice)
 			{
 					case '+':System.out.println("Sum of "+num_1+" and "+num_2+" is "+(num_1+num_2)); //print sum
