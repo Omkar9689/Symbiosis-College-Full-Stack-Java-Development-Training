@@ -1,3 +1,4 @@
+/* Java program to demonstrate 2D Array of String */
 import java.util.*;
 
 public class stateCityUsing2DArray {
