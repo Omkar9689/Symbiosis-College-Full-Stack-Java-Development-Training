@@ -7,7 +7,8 @@ import java.util.*;
 public class twoSum {
 
 	public static void main(String[] args) {
-		int arr[] = new int[] {2,7,11,15};
+		
+		int arr[] = new int[] {9,8,7,6,5,4,3,2,1,0};
 		int index1=0,index2=0,target;
 		
 		Scanner sc = new Scanner(System.in);
@@ -21,7 +22,11 @@ public class twoSum {
 				if((arr[i]+arr[j])==target) {
 					index1=i;
 					index2=j;
+					break;
 				}
+			}
+			if(index1!=0 || index2!=0) {
+				break;
 			}
 		}
 		
@@ -36,3 +41,4 @@ public class twoSum {
 	}
 
 }
+
