@@ -12,6 +12,7 @@ public class Employee {
 	}
 	
 	public void showData() {
+		
 		System.out.println("Employee Id :- "+empId);
 		System.out.println("Employee Name :- "+empName);
 		System.out.println("Employee Address :- "+empAddr);
@@ -32,6 +33,7 @@ public class Employee {
 		empList=new Employee[numOfEmp];
 		
 		for(int i=0;i<numOfEmp;i++) {
+			
 			System.out.println("|--------Employee "+(i+1)+"-------|");
 			
 			System.out.println("Enter Employee Id");
@@ -48,7 +50,9 @@ public class Employee {
 		}
 		
 		System.out.println("|-----------------Stored Records-----------------------|");
+		
 		for(int i=0;i<numOfEmp;i++) {
+			
 			empList[i].showData();
 		}
 	}
