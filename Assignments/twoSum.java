@@ -1,3 +1,7 @@
+//Java Program for Two Sum
+/* We have an array and we have given a target value
+we have to find 2 index in the array of which the taregt is accheived by adding the values at that index */
+
 import java.util.*;
 
 public class twoSum {
