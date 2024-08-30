@@ -1,3 +1,4 @@
+/* Java program to demonstrate array of objects */
 
 import java.util.*;
 public class Employee {
