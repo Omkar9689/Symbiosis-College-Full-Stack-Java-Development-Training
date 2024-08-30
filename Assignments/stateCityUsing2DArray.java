@@ -12,11 +12,11 @@ public class stateCityUsing2DArray {
 			for(int j=0;j< 2;j++) {
 				if(j==0)
 				{
-					System.out.println("Enter State");
+					System.out.println("Enter State"); 		//Storing States at 0th Index
 					str[i][j]=sc.nextLine();
 				}
 				else {
-					System.out.println("Enter Name of City Belong to State "+str[i][0]);
+					System.out.println("Enter Name of City Belong to State "+str[i][0]);	//storing names of cities 
 					str[i][j]=sc.nextLine();
 				}
 			}
