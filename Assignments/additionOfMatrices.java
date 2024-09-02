@@ -1,5 +1,8 @@
+/* Java program for addition of 2 matrices (demonstration of 2D array) */
+
 import java.util.*;
-public class additionOf2DArrays {
+
+public class additionOfMatrices{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -56,7 +59,7 @@ public class additionOf2DArrays {
 			System.out.println();
 		}
 		
-		System.out.println("-----------------Addition of both Matrix--------------");
+		System.out.println("-----------------Addition of Both Matrix--------------");
 		for(int i=0;i<n;i++)
 		{
 			for(int j=0;j<m;j++)
