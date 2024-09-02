@@ -22,7 +22,7 @@ public class arrayAllOperations{
 		return arr;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) {	//main method
 		
 		int arrSize,arraySum=0;
 		float avgOfArrayElements;
