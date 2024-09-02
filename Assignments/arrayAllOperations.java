@@ -60,7 +60,20 @@ public class arrayAllOperations{
 		System.out.println("\n\nSum of all Elements of array is "+arraySum);
 		
 		avgOfArrayElements = arraySum / arrSize;							//calculating average of array elements
-		System.out.println("\nAverage of Elements of array is "+avgOfArrayElements);			//dsiplaying average
+		System.out.println("Average of Elements of array is "+avgOfArrayElements);			//dsiplaying average
+
+		int minElement=arr[0],maxElement=arr[0];
+		for(int i=0;i<arrSize-1;i++){
+			if(arr[i]>arr[i+1]) {
+				minElement=arr[i+1];								//finding minimum element
+			}
+			if(arr[i]<arr[i+1]) {
+				maxElement=arr[i+1];								//finding maximun element
+			}
+		}
+		
+		System.out.println("Minimum element of Array is :- "+minElement);
+		System.out.println("Maximun element of Array is :- "+maxElement);
 		
 		
 		System.out.println("\n----------------Unsorted(Initial) Array-----------");
