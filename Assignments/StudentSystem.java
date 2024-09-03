@@ -1,3 +1,5 @@
+/* Java program to record multiple students as per users need */
+
 import java.util.*;
 
 public class StudentSystem {
@@ -16,7 +18,15 @@ public class StudentSystem {
 		this.studUserName=studUserName;
 		this.studPass=studPass;
 		studId++;
-		System.out.println("Welcome to the Students Record System: Your Student ID is :- "+studId);
+	}
+	public String toString(){
+		return "Welcome to the Students Record System: Your Student ID is :- "+studId;
+	}
+	
+	void show() {
+		System.out.println("Name :-"+studUserName);
+		System.out.println("Pass :-"+studPass);
+		System.out.println("Uid :-"+studId);
 	}
 	
 
@@ -41,6 +51,10 @@ public class StudentSystem {
 				
 				if(studUserName.equals(studPass)) {
 					studIdRecord[i]= new StudentSystem(studUserName,studPass);
+					System.out.println(studIdRecord[i]);
+					for(int j=0;j<1;j++) {
+						studIdRecord[j].show();
+					}
 					i=i+1;
 				}
 				else {
