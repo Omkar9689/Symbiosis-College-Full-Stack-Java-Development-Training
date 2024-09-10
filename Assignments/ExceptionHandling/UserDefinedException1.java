@@ -9,7 +9,7 @@ class userException extends Exception{
 	}
 }
 
-public class UserDefinedExceptions {
+public class UserDefinedException1 {
 
 	public static void main(String[] args){
 		// TODO Auto-generated method stub
