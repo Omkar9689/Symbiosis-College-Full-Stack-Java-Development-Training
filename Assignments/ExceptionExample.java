@@ -1,5 +1,5 @@
 
-public class ExcaptionExample {
+public class ExceptionExample {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -9,7 +9,9 @@ public class ExcaptionExample {
 				int c=a/b;
 				
 				System.out.println(" C : "+c);
+			
 		}catch(ArithmeticException e) {
+			
 			System.out.println("Divide by 0 Error");
 			//System.out.println(e.getMessage());
 		}
@@ -19,7 +21,5 @@ public class ExcaptionExample {
 		
 		int e=a-b;
 		System.out.println(" E : "+e);
-
 	}
-
 }
