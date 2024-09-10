@@ -2,7 +2,6 @@ import javax.naming.PartialResultException;
 
 public class ExceptionExample2 {
 	
-	public static void method1(){};
 	public static void method2() {
 		try {
 				int a=0;
@@ -25,17 +24,12 @@ public class ExceptionExample2 {
 			System.out.println(e3.getMessage());
 		}
 		finally {
-			
-			
+			System.out.println("This is Finally Block");	
 		}
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		method2();
-	
-
-			
+		method2();		
 	}
-
 }
