@@ -125,10 +125,22 @@ public class ArrayListExample {
 		}
 	}
 	
-	public static void method3(ArrayListExample ex) {
+	public static void method3() {
+		ArrayListExample ex1 = new ArrayListExample(201,"Omkar","Nashik");
+		ArrayListExample ex2 = new ArrayListExample(202,"Mayur","Pune");
+		ArrayListExample ex3 = new ArrayListExample(203,"Arjun","Lahore");
+		
 		ArrayList<ArrayListExample> a3 = new ArrayList<ArrayListExample>();
-		a3.add(ex);
+		a3.add(ex1);
+		a3.add(ex2);
+		a3.add(ex3);
 		System.out.println(a3);
+		System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+		System.out.println("Printing using Iterator");
+		Iterator itr = a3.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 
 	}
 
@@ -137,19 +149,13 @@ public class ArrayListExample {
 		// TODO Auto-generated method stub.
 		System.out.println("Generic Collection Example");
 		method2();
-		System.out.println("---------------------------");
+		System.out.println("----------------------------------------------------------------------");
 		
 		System.out.println("No-Generic Collection Example");
 		method1();
-		System.out.println("---------------------------");
+		System.out.println("----------------------------------------------------------------------");
 
 		System.out.println("Adding object in ArrayList");
-		
-		ArrayListExample ex1 = new ArrayListExample(201,"Omkar","Nashik");
-		ArrayListExample ex2 = new ArrayListExample(202,"Mayur","Pune");
-		ArrayListExample ex3 = new ArrayListExample(203,"Arjun","Lahore");
-		method3(ex1);
-		method3(ex2);
-		method3(ex3);
+		method3();
 	}
 }
