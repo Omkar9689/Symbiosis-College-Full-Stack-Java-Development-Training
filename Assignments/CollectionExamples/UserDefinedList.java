@@ -28,7 +28,7 @@ public class UserDefinedList {
                             list.add(sc.nextInt());
                         } catch (InputMismatchException e) {
                             System.out.println("Wrong Input. Please enter an integer.");
-                            sc.next(); // Clear the invalid input
+                            sc.next(); 
                         }
                         break;
                         
@@ -68,7 +68,7 @@ public class UserDefinedList {
         } catch (Exception e) {
             System.out.println("Exception Occurred: " + e.getMessage());
         } finally {
-            sc.close(); // Close the scanner
+            sc.close();
         }
     }
 }
