@@ -41,6 +41,7 @@ public class ArraySortingExample {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("--------------Sorting with Sort Method-----------------");
 		sort_array();
 		System.out.println("--------------Sorting without Method-----------------");
 		sort_withoutMethod();
