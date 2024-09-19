@@ -1,6 +1,6 @@
 package ThreadsInJava;
 
-public class ThreadingExample extends Thread {
+public class ThreadExample1 extends Thread {
 	
 
 	public static void main(String[] args) {
