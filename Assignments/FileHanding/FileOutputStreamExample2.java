@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 
-public class FileOutputStream2 {
+public class FileOutputStreamExample2 {
 	
 	static String fname="D:\\Barbade Omkar S\\HelloWorld\\src\\FileHanding\\text2.txt";
 	
