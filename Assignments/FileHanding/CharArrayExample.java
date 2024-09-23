@@ -4,7 +4,7 @@ import java.io.CharArrayWriter;
 import java.io.File;
 import java.io.FileWriter;
 
-public class FileWriterExample {
+public class CharArrayExample {
 	
 	static String fname="D:\\Barbade Omkar S\\HelloWorld\\src\\FileHanding\\abc.txt";
 
