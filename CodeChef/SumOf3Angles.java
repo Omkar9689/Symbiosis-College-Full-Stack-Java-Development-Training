@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Demo3 {
+public class SumOf3Angles {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
