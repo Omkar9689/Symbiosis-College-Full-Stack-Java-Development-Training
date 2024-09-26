@@ -36,7 +36,7 @@ public class StatementInterfaceDemo {
 		}	
 		return n;
 	}
-	public static void showData() {
+	public static void showRecords() {
 		try {
 			
 			ResultSet rs = st.executeQuery("Select * from employee;");
@@ -52,14 +52,14 @@ public class StatementInterfaceDemo {
 		}
 	}
 	
-	public static void insertData(int ecode,String empName,char empGender,char empGrade,int empSalary) {		
+	public static void insertRecord(int ecode,String empName,char empGender,char empGrade,int empSalary) {		
 			int n=0;
 			try {
 				String query="Insert into employee values("+ecode+",'"+empName+"','"+empGender+"','"+empGrade+"',"+empSalary+");";
 				n= st.executeUpdate(query);
 				if(n>0) {
 					System.out.println("Inserted Successfully......");
-					showData();
+					showRecords();
 				}
 				else {
 					System.out.println("Insertion Failed");
@@ -71,7 +71,7 @@ public class StatementInterfaceDemo {
 			}		
 		}
 	
-	public static void updateData(int empId) {
+	public static void updateRecord(int empId) {
 		int choice=0,n=0,empSalary;
 		String empName;
 		String empGender = null;
@@ -89,81 +89,79 @@ public class StatementInterfaceDemo {
 				System.out.println("5)Exit");
 				choice=sc.nextInt();
 				switch(choice) {
-							case 1:
-							 		System.out.println("Enter Name to Update");
-							 		empName=sc.nextLine();
-							 		try {									
-											String query="update employee set ENAME='"+empName+"' where ECODE="+empId+";";
-											n= st.executeUpdate(query);
-											if(n>0) {
-												System.out.println("Name Updated Successfully......");
-												showData();
-											}
-											else {
-												System.out.println("Updation Failed or Employee Not Found");
-											}
-										
-									}
-									catch(SQLException e) {
-										e.printStackTrace();
-									}
-							 		break;
+							case 1: System.out.println("Enter Name to Update");
+								empName=sc.nextLine();
+								try {									
+										String query="update employee set ENAME='"+empName+"' where ECODE="+empId+";";
+										n= st.executeUpdate(query);
+										if(n>0) {
+											System.out.println("Name Updated Successfully......");
+											showRecords();
+										}
+										else {
+											System.out.println("Updation Failed or Employee Not Found");
+										}
+									
+								}
+								catch(SQLException e) {
+									e.printStackTrace();
+								}
+								break;
 							 		
 							 		
 							case 2:try {
-										
-								 		System.out.println("Enter Gender to Update");
-								 		empGender=sc.next();
-										String query="update employee set GENDER='"+empGender+"' where ECODE="+empId+";";
-										n= st.executeUpdate(query);
-										if(n>0) {
-											System.out.println("Gender Updated Successfully......");
-											showData();
-										}
-										else {
-											System.out.println("Updation Failed");
-										}
-										
+									System.out.println("Enter Gender to Update");
+									empGender=sc.next();
+									String query="update employee set GENDER='"+empGender+"' where ECODE="+empId+";";
+									n= st.executeUpdate(query);
+									if(n>0) {
+										System.out.println("Gender Updated Successfully......");
+										showRecords();
 									}
-									catch(SQLException e) {
-										e.printStackTrace();
-									}
-							 		break;
+									else {
+										System.out.println("Updation Failed");
+									}										
+								}
+								catch(SQLException e) {
+									e.printStackTrace();
+								}
+								break;
+						
 							case 3:System.out.println("Enter Grade to Update");
 							 		empGrade=sc.next().charAt(0);
 							 		try {									
-											String query="update employee set GRADE='"+empGrade+"' where ECODE="+empId+";";
-											n= st.executeUpdate(query);
-											if(n>0) {
-												System.out.println("Updated Successfully......");
-												showData();
-											}
-											else {
-												System.out.println("Updation Failed");
-											}								
-									}
-									catch(SQLException e) {
-										e.printStackTrace();
-									}
-							 		break;
-							case 4:System.out.println("Enter Salary to Update");
-							 		empSalary=sc.nextInt();
-							 		try {
-										String query="update employee set GROSS='"+empSalary+"' where ECODE="+empId+";";
+										String query="update employee set GRADE='"+empGrade+"' where ECODE="+empId+";";
 										n= st.executeUpdate(query);
 										if(n>0) {
 											System.out.println("Updated Successfully......");
-											showData();
+											showRecords();
 										}
 										else {
 											System.out.println("Updation Failed");
-										}
-										
+										}								
 									}
 									catch(SQLException e) {
 										e.printStackTrace();
 									}
 							 		break;
+							case 4: System.out.println("Enter Salary to Update");
+								empSalary=sc.nextInt();
+								try {
+									String query="update employee set GROSS='"+empSalary+"' where ECODE="+empId+";";
+									n= st.executeUpdate(query);
+									if(n>0) {
+										System.out.println("Updated Successfully......");
+										showRecords();
+									}
+									else {
+										System.out.println("Updation Failed");
+									}
+									
+								}
+								catch(SQLException e) {
+									e.printStackTrace();
+								}
+								break;
 							 
 							default:System.out.println("Invalid Input or Return to Main Menu");
 				}
@@ -187,7 +185,7 @@ public class StatementInterfaceDemo {
 				n= st.executeUpdate(query);
 				if(n>0) {
 					System.out.println("Record Deleted Successfully......");
-					showData();
+					showRecords();
 				}
 				else {
 					System.out.println("Deletion Failed");
@@ -221,62 +219,41 @@ public class StatementInterfaceDemo {
 		{
 			try {
 			System.out.println("---------------Menu-------------");
-			//System.out.println("1)Connect to Server");
 			System.out.println("1)Show Data");
 			System.out.println("2)Insert Data");
 			System.out.println("3)Update Data");
 			System.out.println("4)Delete");
 			System.out.println("5)Close Connection and Exit");
-			//System.out.println("6)Exit");
 			System.out.println("Enter your choice");
 			choice=sc.nextInt();
 			switch(choice) {
 								
-						case 1:if(cn!=null) {
-								showData();
-								}
-								else {
-									System.out.println("Not Connected to Server....");
-								}
+						case 1:showRecords();
 								break;
 								
-						case 2:if(cn!=null) {
-									System.out.println("Enter Data...");
-									System.out.println("Enter Employee ID");
-									int ecode=sc.nextInt();
-									System.out.println("Enter Employee Name");
-									String empName=sc.next();
-									System.out.println("Enter Employee Gender (M/F)");
-									char empGender=sc.next().charAt(0);
-									System.out.println("Enter Employee Grade ");
-									char empGrade=sc.next().charAt(0);
-									System.out.println("Enter Employee Salary");
-									int empSalary=sc.nextInt();								
-									insertData(ecode, empName, empGender, empGrade, empSalary);
-								}
-								else {
-									System.out.println("Not Connected to Server....");
-								}
+						case 2:	System.out.println("Enter Data...");
+								System.out.println("Enter Employee ID");
+								int ecode=sc.nextInt();
+								System.out.println("Enter Employee Name");
+								String empName=sc.next();
+								System.out.println("Enter Employee Gender (M/F)");
+								char empGender=sc.next().charAt(0);
+								System.out.println("Enter Employee Grade ");
+								char empGrade=sc.next().charAt(0);
+								System.out.println("Enter Employee Salary");
+								int empSalary=sc.nextInt();								
+								insertRecord(ecode, empName, empGender, empGrade, empSalary);								
 								break;
 								
-						case 3:if(cn!=null) {
-									System.out.println("Enter Employee Id to Update Data");
-									int eCode=sc.nextInt();
-									updateData(eCode);
-								}
-								else {
-									System.out.println("Not Connected to Server....");
-								}
+						case 3:System.out.println("Enter Employee Id to Update Data");
+								int eCode=sc.nextInt();
+								updateRecord(eCode);
 								break;
 						
-						case 4:if(cn!=null) {
-									System.out.println("Enter Employee Id to Delete Record");
-									int Ecode=sc.nextInt();
-									deleteRecord(Ecode);
-								}
-								else {
-									System.out.println("Not Connected to Server....");
-								}
+						case 4:System.out.println("Enter Employee Id to Delete Record");
+								int Ecode=sc.nextInt();
+								deleteRecord(Ecode);
+								
 								break;
 								
 						case 5:closeConnection();
