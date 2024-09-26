@@ -1,0 +1,55 @@
+#create database employeeDB;
+use employee;
+
+#insert into employee value(996,"Trupti",'F','A',960000);
+
+#select distinct(GENDER) from employee;
+
+#select * from employee;
+
+#to change colum name while displaying
+#select ECODE as "EMPLOYEE_CODE" from employee;
+
+#to get data from a specific range
+#select ENAME,ECODE,GENDER,gross from employee where gross between 960000 and 960000;
+
+#to get records on basis of a specified column with data type char
+#select * from employee where Grade in ("A1","A5");
+
+#to get records which are starting from the specific letter
+#select * from employee where ename like ("A%");
+
+#to get records which are starting from the specific second letter (p)
+#select * from employee where ename like ("_p%");
+
+#to get records which are ending from the specific letter(i)
+#select * from employee where ename like ("%i");
+
+#sorts the data based on particular column
+#select * from employee order by ENAME;
+
+#selecting data having specified column(grade) null
+#select * from emplolyee where Grade is null;
+
+#sorts the data based on particular column in descending order
+#select * from employee order by ECODE desc;
+
+
+
+
+------------------------------------------------------------------------------------
+
+
+#create table student(student_id int primary key not null,student_name varchar(50) not null,Student_Subject varchar(30) not null,Student_Avg decimal not null, Student_Div char(1) not null);
+
+#select * from student;
+
+#select Student_name,student_subject from student;
+
+#select * from Student where student_subject in ("physics","chemistry");
+
+#insert into student values(12,"Omkar","Physics",68,'A');
+
+#select * from student where student_avg>=70;
+
+#select * from student where student_name like ("a%n");
