@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Ddemo2 {
+public class StringVowel&Consonant {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
