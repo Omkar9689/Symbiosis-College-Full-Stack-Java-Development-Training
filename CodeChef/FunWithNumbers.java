@@ -14,11 +14,11 @@ public class FunWithNumbers {
 		System.out.println("Enter Second Number :- ");
 		num2=sc.nextInt();
 		if(num1<num2) {
-			System.out.println("SUm of "+num1+" & "+num2+" is :- "+(num1+num2));
+			System.out.println("Sum of "+num1+" & "+num2+" is :- "+(num1+num2));
 			
 		}
 		else {
-			System.out.println("Diference between "+num1+" & "+num2+" is :- "+(num1-num2));
+			System.out.println("Difference between "+num1+" & "+num2+" is :- "+(num1-num2));
 		}
 	}
 }
