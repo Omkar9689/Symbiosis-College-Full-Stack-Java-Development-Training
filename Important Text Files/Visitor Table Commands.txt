@@ -1,0 +1,31 @@
+#SQL commands to create Visitors Table
+
+#create database VisitorsDB;
+use VisitorsDB;
+
+#create table visitor (v_Id int primary key not null, v_Name varchar(40) ,v_Gende char(1) ,v_ComeFrom varchar(50),amt_Paid int); 
+#ALTER TABLE visitor RENAME COLUMN v_Gende TO v_Gender;
+
+#select * from visitor;
+
+#select v_Name from visitor where v_comeFrom="Banglore" and v_gender='F' and amt_Paid>3000;
+
+#select  distinct(v_comeFrom) from visitor ; 
+
+#insert into visitor values(16,"Tushar",'M',"Pune",null);
+
+#select * from visitor order by amt_paid desc;
+
+#update visitor set amt_paid=(amt_paid+(amt_paid*0.1)) where v_Id = 6;
+
+#select * from visitor;
+
+#select Sum(amt_paid) from visitor;
+
+#select SUM(amt_paid) from visitor where v_ComeFrom="Nashik";
+
+#select * from visitor where amt_paid is NULL;
+
+#select count(v_comeFrom) from visitor where v_comeFrom in ("Nashik","Pune");
+
+select * from visitor;
