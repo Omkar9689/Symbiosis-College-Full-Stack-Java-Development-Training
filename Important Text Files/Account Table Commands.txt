@@ -3,6 +3,18 @@
 
 #create table transaction(Acc_No int primary key not null,holders_Name varchar(50) not null,holders_addrs varchar(50) not null,Tranc_Id int not null,tranc_amt decimal not null,tranc_type varchar(20) not null,tranc_date date not null);  
 
+
+/*INSERT INTO transaction VALUES ('1523', 'Omkar', 'Nashik', '58956', '500', 'Withdraw', '2024/09/18'),
+								('1246', 'Apurva', 'Pune', '78596', '5200', 'Deposite', '2024/09/20'),
+								('8456', 'Farhaan', 'Nashik', '85964', '26300', 'Deposite', '2024/06/19'),
+								('2145', 'Trupti', 'Pune', '84579', '600', 'Withdraw', '2024/06/1'),
+								('2654', 'Arjun', 'Banglore', '78954', '2000', 'Deposite', '2024/02/17'),
+								('7485', 'Mayur', 'Banglore', '78965', '680', 'Deposite', '2024/10/26'),
+								('5897', 'Nirmiti', 'Mumbai', '74213', '7850', 'Withdraw', '2024/08/21'),
+								('8645', 'Bunti', 'Mumbai', '74856', '500', 'Withdraw', '2024/06/22'),
+								('4578', 'Pooja', 'Pune', '78632', '2000', 'Deposite', '2024/04/30');
+
+
 select * from transaction;# where tranc_date <= "09/18/2024";
 
 
@@ -19,3 +31,5 @@ select acc_no,holders_name from transaction where holders_addrs in ("Pune","Mumb
 select MIN(tranc_amt),MAX(tranc_amt) from transaction;
 
 select sum(tranc_amt) from transaction;
+
+*/
