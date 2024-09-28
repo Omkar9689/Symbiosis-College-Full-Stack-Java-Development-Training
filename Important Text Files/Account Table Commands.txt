@@ -1,0 +1,21 @@
+#create database Account;
+#use account;
+
+#create table transaction(Acc_No int primary key not null,holders_Name varchar(50) not null,holders_addrs varchar(50) not null,Tranc_Id int not null,tranc_amt decimal not null,tranc_type varchar(20) not null,tranc_date date not null);  
+
+select * from transaction;# where tranc_date <= "09/18/2024";
+
+
+select * from transaction where tranc_type="Withdraw";
+
+select acc_no,tranc_amt,holders_name from transaction where tranc_date<="2024/05/31";
+
+select tranc_date,tranc_type from transaction where acc_no = "80";
+
+select acc_no,holders_name,tranc_amt from transaction where tranc_amt <= 5000; 
+
+select acc_no,holders_name from transaction where holders_addrs in ("Pune","Mumbai");
+
+select MIN(tranc_amt),MAX(tranc_amt) from transaction;
+
+select sum(tranc_amt) from transaction;
